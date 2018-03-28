@@ -6,6 +6,7 @@ public class PaddleScript : MonoBehaviour {
 
 	public Rigidbody2D rb;
 	public float speed;
+	public float maxX;
 		
 	void Update(){
 		// this input would go from -1 to 0 and to 1 when it moves from left to right
@@ -27,6 +28,12 @@ public class PaddleScript : MonoBehaviour {
 		if (x == 0){
 			Stop ();
 		}
+
+		//transform.position will return the position of the paddle which is stored in the variable pos
+		Vector3 pos = transform.position;
+		pos.x = Mathf.Clamp(pos.x, -maxX, maxX);
+		//pos.x is what limits the position of the paddle and then it is returned to pos.x
+		transform.position = pos;
 	}
 	
 	void  MoveLeft(){
