@@ -9,11 +9,14 @@ public class BallScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		rb.AddForce(new Vector2(ballForce, ballForce));
+	
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//whenever the space will be pressed the game would start
+		if(Input.GetKey(KeyCode.Space)){
+			rb.AddForce(new Vector2(ballForce, ballForce));
+		}
 	}
 }
