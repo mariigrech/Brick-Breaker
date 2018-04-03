@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 130698952}
   m_Layer: 0
   m_Name: PinkBallSmiley
-  m_TagString: Untagged
+  m_TagString: Ball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 530246868}
   - component: {fileID: 530246867}
   - component: {fileID: 530246866}
+  - component: {fileID: 530246870}
   m_Layer: 0
   m_Name: Grey
   m_TagString: Untagged
@@ -357,6 +358,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &530246870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 530246865}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b197ff90c6a6e49ba8ab69b0854448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &680509763
 GameObject:
   m_ObjectHideFlags: 0
@@ -368,6 +380,7 @@ GameObject:
   - component: {fileID: 680509766}
   - component: {fileID: 680509765}
   - component: {fileID: 680509764}
+  - component: {fileID: 680509768}
   m_Layer: 0
   m_Name: Green
   m_TagString: Untagged
@@ -477,6 +490,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &680509768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 680509763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b197ff90c6a6e49ba8ab69b0854448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1006724205
 GameObject:
   m_ObjectHideFlags: 0
@@ -488,6 +512,7 @@ GameObject:
   - component: {fileID: 1006724208}
   - component: {fileID: 1006724207}
   - component: {fileID: 1006724206}
+  - component: {fileID: 1006724210}
   m_Layer: 0
   m_Name: Yellow
   m_TagString: Untagged
@@ -597,6 +622,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1006724210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1006724205}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b197ff90c6a6e49ba8ab69b0854448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1102715145
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,6 +843,7 @@ GameObject:
   - component: {fileID: 1166317989}
   - component: {fileID: 1166317988}
   - component: {fileID: 1166317987}
+  - component: {fileID: 1166317991}
   m_Layer: 0
   m_Name: Red
   m_TagString: Untagged
@@ -916,6 +953,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1166317991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1166317986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b197ff90c6a6e49ba8ab69b0854448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1227293817
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,6 +975,7 @@ GameObject:
   - component: {fileID: 1227293820}
   - component: {fileID: 1227293819}
   - component: {fileID: 1227293818}
+  - component: {fileID: 1227293822}
   m_Layer: 0
   m_Name: Blue
   m_TagString: Untagged
@@ -1036,6 +1085,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1227293822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1227293817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b197ff90c6a6e49ba8ab69b0854448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1638183842
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,6 +1343,7 @@ GameObject:
   - component: {fileID: 1878034701}
   - component: {fileID: 1878034700}
   - component: {fileID: 1878034699}
+  - component: {fileID: 1878034703}
   m_Layer: 0
   m_Name: Pink
   m_TagString: Untagged
@@ -1392,6 +1453,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1878034703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1878034698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7b197ff90c6a6e49ba8ab69b0854448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1968886211
 GameObject:
   m_ObjectHideFlags: 0
