@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3c4ab4371e552ce49a7d64d9a839ad79
-timeCreated: 1522157149
+guid: 07a8614587a15f348a97790748e43318
+timeCreated: 1522769600
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Background
+    21300000: 12-game-background-mesh-cloud_0
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -81,15 +81,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Background
+      name: 12-game-background-mesh-cloud_0
       rect:
         serializedVersion: 2
-        x: 194
-        y: 0
+        x: 144
+        y: 26
         width: 174
         height: 234
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

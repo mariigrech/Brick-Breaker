@@ -4,14 +4,19 @@ using UnityEngine;
 
 public class BallScript : MonoBehaviour {
 
+	public UIManager ui;
+	private Vector3 initialPosition; 
+
+	// Use this for initialization
+	void Start (){
+		//getting access to the ui manager script within that game object, from this I can call any component
+		ui = GameObject.FindWithTag("ui").GetComponent<UIManager> ();
+		initialPosition = transform.position;
+	}
+
 	public Rigidbody2D rb;
 	public float ballForce;
 	bool gameStarted = false; //creating a boolean variable and then setting it to false, it will check if the game has started or not
-
-	// Use this for initialization
-	void Start () {
-	
-	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -28,6 +33,14 @@ public class BallScript : MonoBehaviour {
 
 			rb.AddForce(new Vector2(ballForce, ballForce));
 			gameStarted = true; //the game has now started and no more force can be added to the ball
+		}
+	}
+	void OnCollisionEnter2D(Collision2D col){ print ("Keith Gay");
+		if (col.gameObject.tag == "losing") {
+			print ("Keith Gay aktar min Felix Busuttil");
+			ui.DecreaseLives ();
+			transform.position = initialPosition;
+			rb.velocity = Vector3.zero;
 		}
 	}
 }
