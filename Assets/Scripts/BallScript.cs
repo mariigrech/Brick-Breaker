@@ -5,6 +5,7 @@ using UnityEngine;
 public class BallScript : MonoBehaviour {
 
 	public UIManager ui;
+	public GameObject paddle;
 	private Vector3 initialPosition; 
 
 	// Use this for initialization
@@ -20,11 +21,18 @@ public class BallScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		//whenever the space will be pressed the game would start
 		if(Input.GetKey(KeyCode.Space)  && gameStarted == false)
 		//We are giving it a condition that if the space buttons has been pressed 
 		//AND the game hasn't yet started, then the code inside the if statement would be executed
 		{
+
+			if (ui.lives == 0) {
+				ui.lives = 3;
+				ui.liveText.text = "Lives: " + ui.lives;
+				ui.GameOverRender.enabled = false;
+			}
 
 			//setting the parent to none whenever we press the space key for the first time, and then we add the force
 			transform.SetParent (null);
@@ -35,12 +43,13 @@ public class BallScript : MonoBehaviour {
 			gameStarted = true; //the game has now started and no more force can be added to the ball
 		}
 	}
-	void OnCollisionEnter2D(Collision2D col){ print ("Keith Gay");
+	void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.tag == "losing") {
-			print ("Keith Gay aktar min Felix Busuttil");
 			ui.DecreaseLives ();
 			transform.position = initialPosition;
+			paddle.transform.position = initialPosition;
 			rb.velocity = Vector3.zero;
+			gameStarted = false;
 		}
 	}
 }
