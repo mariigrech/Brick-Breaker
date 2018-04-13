@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BallScript : MonoBehaviour {
 
 	public UIManager ui;
 	public GameObject paddle;
 	private Vector3 initialPosition; 
+	public Renderer SpaceRenderer;
 
 	// Use this for initialization
 	void Start (){
@@ -27,11 +29,10 @@ public class BallScript : MonoBehaviour {
 		//We are giving it a condition that if the space buttons has been pressed 
 		//AND the game hasn't yet started, then the code inside the if statement would be executed
 		{
-
-			if (ui.lives == 0) {
-				ui.lives = 3;
-				ui.liveText.text = "Lives: " + ui.lives;
-				ui.GameOverRender.enabled = false;
+			
+			SpaceRenderer.enabled = false;
+			if (ui.lives == 0 || ui.score == 8) {
+				SceneManager.LoadScene("Level 1");
 			}
 
 			//setting the parent to none whenever we press the space key for the first time, and then we add the force
@@ -46,10 +47,15 @@ public class BallScript : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D col){
 		if (col.gameObject.tag == "losing") {
 			ui.DecreaseLives ();
+			resetBallAndPaddle();
+		}
+	}
+
+	public void resetBallAndPaddle() {
 			transform.position = initialPosition;
 			paddle.transform.position = initialPosition;
 			rb.velocity = Vector3.zero;
 			gameStarted = false;
-		}
 	}
+
 }
